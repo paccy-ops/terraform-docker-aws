@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devops-paccy-directive-tf-state"
+    bucket         = "terragrunt-pacifique-terraform-state-dev"
     key            = "docker/example/terraform.tfstate"
     region         = "ap-southeast-1"
-    dynamodb_table = "terraform-state-locking"
+    dynamodb_table = "terraform-locks"
     encrypt        = true
   }
 }
